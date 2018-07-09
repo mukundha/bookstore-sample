@@ -65,14 +65,9 @@
         </Step>
     </DefaultFaultRule>
     <HTTPTargetConnection>
-        <LoadBalancer>
-            <Algorithm>Weighted</Algorithm>
-            <Server name="k8s">
-                <Weight>1</Weight>
-            </Server>
-            <Server name="onprem">
-                <Weight>5</Weight>
-            </Server>
+        <LoadBalancer>            
+            <Server name="k8s">                
+            </Server>            
         </LoadBalancer>
         <Path>/jaxws-endpoint/EBookStoreImplService</Path>
     </HTTPTargetConnection>
