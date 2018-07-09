@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="return-open-api">
+    <DisplayName>Return Open API</DisplayName>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+        	<StatusCode>200</StatusCode>
+            <Headers>
+            	<Header name="Content-Type">application/json</Header>
+            </Headers>
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "EBookStoreImplService",
+    "description": "A OAS document generated from WSDL",
+    "termsOfService": "",
+    "contact": {
+      "name": "API Team"
+    },
+    "license": {
+      "name": "Apache 2.0"
+    }
+  },
+  "host": "@request.header.host#",
+  "basePath": "/ebookstore/v1",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/books": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/findEBooksResponse"
+            }
+          }
+        },
+        "description": "Implements WSDL operation findEBooks",
+        "parameters": [
+          {
+            "name": "arg0",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/saveBookResponse"
+            }
+          }
+        },
+        "description": "Implements WSDL operation saveBook",
+        "parameters": [
+          {
+            "name": "saveBook",
+            "in": "body",
+            "required": "true",
+            "schema": {
+              "$ref": "#/definitions/saveBook"
+            }
+          }
+        ]
+      }
+    },
+    "/login": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/welcomeMessageResponse"
+            }
+          }
+        },
+        "description": "Implements WSDL operation welcomeMessage",
+        "parameters": [
+          {
+            "name": "welcomeMessage",
+            "in": "body",
+            "required": "true",
+            "schema": {
+              "$ref": "#/definitions/welcomeMessage"
+            }
+          }
+        ]
+      }
+    },
+    "/books/{bookId}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/takeBookResponse"
+            }
+          }
+        },
+        "description": "Implements WSDL operation takeBook",
+        "parameters": [
+          {
+            "name": "return",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "arg0",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "/appendix": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "schema": {
+              "$ref": "#/definitions/addAppendixResponse"
+            }
+          }
+        },
+        "description": "Implements WSDL operation addAppendix",
+        "parameters": [
+          {
+            "name": "addAppendix",
+            "in": "body",
+            "required": "true",
+            "schema": {
+              "$ref": "#/definitions/addAppendix"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "findEBooks": {
+      "properties": {
+        "arg0": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "findEBooksResponse": {
+      "properties": {
+        "return": {
+          "$ref": "#/definitions/return"
+        }
+      },
+      "type": "object"
+    },
+    "return": {
+      "properties": {
+        "bookId": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "string"
+          }
+        },
+        "numPages": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "price": {
+          "type": "number",
+          "format": "double"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "welcomeMessage": {
+      "properties": {
+        "arg0": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "welcomeMessageResponse": {
+      "properties": {
+        "return": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "takeBook": {
+      "properties": {
+        "arg0": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "takeBookResponse": {
+      "properties": {
+        "return": {
+          "$ref": "#/definitions/return"
+        }
+      },
+      "type": "object"
+    },
+    "saveBook": {
+      "properties": {
+        "arg0": {
+          "$ref": "#/definitions/arg0"
+        }
+      },
+      "type": "object"
+    },
+    "arg0": {
+      "properties": {
+        "bookId": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "string"
+          }
+        },
+        "numPages": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "price": {
+          "type": "number",
+          "format": "double"
+        },
+        "title": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "saveBookResponse": {
+      "properties": {},
+      "type": "object"
+    },
+    "addAppendix": {
+      "properties": {
+        "arg0": {
+          "$ref": "#/definitions/arg0"
+        },
+        "arg1": {
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "type": "object"
+    },
+    "addAppendixResponse": {
+      "properties": {
+        "return": {
+          "$ref": "#/definitions/return"
+        }
+      },
+      "type": "object"
+    }
+  }
+}</Payload>
+        </Set>
+    </FaultResponse>
+</RaiseFault>

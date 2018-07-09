@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description>EBookStoreImplService</Description>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>Verify-API-Key</Name>
+            </Step>
+            <Step>
+                <Name>extract-format</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <Name>JavaScript-FormatResponse</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="GetOAS">
+            <Description>Get Open API Specification</Description>
+            <Request>
+                <Step>
+                    <Name>return-open-api</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/openapi.json") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="addAppendix">
+            <Description>addAppendix</Description>
+            <Request>
+                <Step>
+                    <Name>addAppendix-json-to-xml</Name>
+                    <Condition>(request.header.Content-Type == "application/json")</Condition>
+                </Step>
+                <Step>
+                    <Name>addAppendix-add-namespace</Name>
+                </Step>
+                <Step>
+                    <Name>addAppendix-add-soapaction</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/appendix") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="findEBooks">
+            <Description>findEBooks</Description>
+            <Request>
+                <Step>
+                    <Name>findEBooks-extract-query-param</Name>
+                </Step>
+                <Step>
+                    <Name>findEBooks-build-soap</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/books") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="welcomeMessage">
+            <Description>welcomeMessage</Description>
+            <Request>
+                <Step>
+                    <Name>welcomeMessage-json-to-xml</Name>
+                    <Condition>(request.header.Content-Type == "application/json")</Condition>
+                </Step>
+                <Step>
+                    <Name>welcomeMessage-add-namespace</Name>
+                </Step>
+                <Step>
+                    <Name>welcomeMessage-add-soapaction</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/login") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="saveBook">
+            <Description>saveBook</Description>
+            <Request>
+                <Step>
+                    <Name>saveBook-json-to-xml</Name>
+                    <Condition>(request.header.Content-Type == "application/json")</Condition>
+                </Step>
+                <Step>
+                    <Name>saveBook-add-namespace</Name>
+                </Step>
+                <Step>
+                    <Name>saveBook-add-soapaction</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/books") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="takeBook">
+            <Description>takeBook</Description>
+            <Request>
+                <Step>
+                    <Name>takeBook-extract-query-param</Name>
+                </Step>
+                <Step>
+                    <Name>takeBook-build-soap</Name>
+                </Step>
+                <Step>
+                    <Name>remove-empty-nodes</Name>
+                    <Condition>(verb == "GET")</Condition>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/books/{bookId}") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="unknown-resource">
+            <Description>Unknown Resource</Description>
+            <Request>
+                <Step>
+                    <Name>unknown-resource</Name>
+                    <Condition>(verb != "GET" AND contentformat == "application/json") OR (verb == "GET" AND acceptformat !~ "*/xml")</Condition>
+                </Step>
+                <Step>
+                    <Name>unknown-resource-xml</Name>
+                    <Condition>(verb != "GET" AND contentformat != "application/json") OR (verb == "GET" AND acceptformat ~ "*/xml")</Condition>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition/>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/ebookstore/v1</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>
