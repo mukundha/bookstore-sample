@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <XSL async="false" continueOnError="false" enabled="true" name="addAppendix-add-namespace">
     <DisplayName>addAppendix Add Namespace</DisplayName>
+    <FaultRules/>
     <Properties/>
-    <Source>request</Source>
-    <ResourceURL>xsl://addAppendix-add-namespace.xslt</ResourceURL>
     <Parameters ignoreUnresolvedVariables="true"/>
+    <ResourceURL>xsl://addAppendix-add-namespace.xslt</ResourceURL>
+    <Source>request</Source>
 </XSL>

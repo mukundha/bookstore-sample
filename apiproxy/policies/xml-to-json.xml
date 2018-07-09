@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <XMLToJSON async="false" continueOnError="false" enabled="true" name="xml-to-json">
     <DisplayName>XML to JSON</DisplayName>
+    <FaultRules/>
+    <Properties/>
     <Options>
-        <RecognizeNumber>true</RecognizeNumber>
         <RecognizeBoolean>true</RecognizeBoolean>
+        <RecognizeNumber>true</RecognizeNumber>
         <RecognizeNull>true</RecognizeNull>
         <NullValue>NULL</NullValue>
+        <TextAlwaysAsProperty>false</TextAlwaysAsProperty>
         <TextNodeName>TEXT</TextNodeName>
         <AttributePrefix>@</AttributePrefix>
+        <StripLevels>0</StripLevels>
     </Options>
     <OutputVariable>response</OutputVariable>
     <Source>response</Source>

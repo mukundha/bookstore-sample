@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <JSONToXML async="false" continueOnError="false" enabled="true" name="saveBook-json-to-xml">
     <DisplayName>saveBook JSON TO XML</DisplayName>
+    <FaultRules/>
     <Properties/>
     <Options>
         <NullValue>NULL</NullValue>
@@ -10,8 +11,8 @@
         <TextNodeName>TEXT</TextNodeName>
         <AttributePrefix>@</AttributePrefix>
         <InvalidCharsReplacement>_</InvalidCharsReplacement>
-        <!--  <ObjectRootElementName>Root</ObjectRootElementName> 
-        <ArrayRootElementName>Array</ArrayRootElementName> -->
+        <ObjectRootElementName>Root</ObjectRootElementName>
+        <ArrayRootElementName>Array</ArrayRootElementName>
         <ArrayItemElementName>Item</ArrayItemElementName>
     </Options>
     <OutputVariable>request</OutputVariable>

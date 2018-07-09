@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ExtractVariables async="false" continueOnError="true" enabled="true" name="findEBooks-extract-query-param">
     <DisplayName>findEBooks Extract Query Param</DisplayName>
-    <Source>request</Source>
-    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <FaultRules/>
+    <Properties/>
     <QueryParam name="q">
         <Pattern ignoreCase="true">{arg0}</Pattern>
     </QueryParam>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">request</Source>
 </ExtractVariables>

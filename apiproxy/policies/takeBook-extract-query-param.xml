@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ExtractVariables async="false" continueOnError="true" enabled="true" name="takeBook-extract-query-param">
     <DisplayName>takeBook Extract Query Param</DisplayName>
-    <Source>request</Source>
-    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <FaultRules/>
+    <Properties/>
     <URIPath>
         <Pattern ignoreCase="true">/books/{arg0}</Pattern>
     </URIPath>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">request</Source>
 </ExtractVariables>

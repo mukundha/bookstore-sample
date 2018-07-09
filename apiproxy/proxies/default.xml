@@ -2,30 +2,12 @@
 <ProxyEndpoint name="default">
     <Description>EBookStoreImplService</Description>
     <FaultRules/>
-    <PreFlow name="PreFlow">
-        <Request>
-            <Step>
-                <Name>Verify-API-Key</Name>
-            </Step>
-            <Step>
-                <Name>extract-format</Name>
-            </Step>
-        </Request>
-        <Response>
-            <Step>
-                <Name>JavaScript-FormatResponse</Name>
-            </Step>
-        </Response>
-    </PreFlow>
-    <PostFlow name="PostFlow">
-        <Request/>
-        <Response/>
-    </PostFlow>
     <Flows>
         <Flow name="GetOAS">
             <Description>Get Open API Specification</Description>
             <Request>
                 <Step>
+                    <FaultRules/>
                     <Name>return-open-api</Name>
                 </Step>
             </Request>
@@ -36,13 +18,16 @@
             <Description>addAppendix</Description>
             <Request>
                 <Step>
-                    <Name>addAppendix-json-to-xml</Name>
                     <Condition>(request.header.Content-Type == "application/json")</Condition>
+                    <FaultRules/>
+                    <Name>addAppendix-json-to-xml</Name>
                 </Step>
                 <Step>
+                    <FaultRules/>
                     <Name>addAppendix-add-namespace</Name>
                 </Step>
                 <Step>
+                    <FaultRules/>
                     <Name>addAppendix-add-soapaction</Name>
                 </Step>
             </Request>
@@ -53,9 +38,11 @@
             <Description>findEBooks</Description>
             <Request>
                 <Step>
+                    <FaultRules/>
                     <Name>findEBooks-extract-query-param</Name>
                 </Step>
                 <Step>
+                    <FaultRules/>
                     <Name>findEBooks-build-soap</Name>
                 </Step>
             </Request>
@@ -66,13 +53,16 @@
             <Description>welcomeMessage</Description>
             <Request>
                 <Step>
-                    <Name>welcomeMessage-json-to-xml</Name>
                     <Condition>(request.header.Content-Type == "application/json")</Condition>
+                    <FaultRules/>
+                    <Name>welcomeMessage-json-to-xml</Name>
                 </Step>
                 <Step>
+                    <FaultRules/>
                     <Name>welcomeMessage-add-namespace</Name>
                 </Step>
                 <Step>
+                    <FaultRules/>
                     <Name>welcomeMessage-add-soapaction</Name>
                 </Step>
             </Request>
@@ -83,13 +73,16 @@
             <Description>saveBook</Description>
             <Request>
                 <Step>
-                    <Name>saveBook-json-to-xml</Name>
                     <Condition>(request.header.Content-Type == "application/json")</Condition>
+                    <FaultRules/>
+                    <Name>saveBook-json-to-xml</Name>
                 </Step>
                 <Step>
+                    <FaultRules/>
                     <Name>saveBook-add-namespace</Name>
                 </Step>
                 <Step>
+                    <FaultRules/>
                     <Name>saveBook-add-soapaction</Name>
                 </Step>
             </Request>
@@ -100,14 +93,17 @@
             <Description>takeBook</Description>
             <Request>
                 <Step>
+                    <FaultRules/>
                     <Name>takeBook-extract-query-param</Name>
                 </Step>
                 <Step>
+                    <FaultRules/>
                     <Name>takeBook-build-soap</Name>
                 </Step>
                 <Step>
-                    <Name>remove-empty-nodes</Name>
                     <Condition>(verb == "GET")</Condition>
+                    <FaultRules/>
+                    <Name>remove-empty-nodes</Name>
                 </Step>
             </Request>
             <Response/>
@@ -117,24 +113,52 @@
             <Description>Unknown Resource</Description>
             <Request>
                 <Step>
-                    <Name>unknown-resource</Name>
                     <Condition>(verb != "GET" AND contentformat == "application/json") OR (verb == "GET" AND acceptformat !~ "*/xml")</Condition>
+                    <FaultRules/>
+                    <Name>unknown-resource</Name>
                 </Step>
                 <Step>
-                    <Name>unknown-resource-xml</Name>
                     <Condition>(verb != "GET" AND contentformat != "application/json") OR (verb == "GET" AND acceptformat ~ "*/xml")</Condition>
+                    <FaultRules/>
+                    <Name>unknown-resource-xml</Name>
                 </Step>
             </Request>
             <Response/>
             <Condition/>
         </Flow>
     </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <FaultRules/>
+                <Name>Verify-API-Key</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>extract-format</Name>
+            </Step>
+        </Request>
+        <Response>
+            <Step>
+                <FaultRules/>
+                <Name>JavaScript-FormatResponse</Name>
+            </Step>
+        </Response>
+    </PreFlow>
     <HTTPProxyConnection>
         <BasePath>/ebookstore/v1</BasePath>
         <Properties/>
         <VirtualHost>default</VirtualHost>
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>
+    <RouteRule name="test-newbackend">
+        <Condition>apiproduct.name="Bookstore-Internal"</Condition>
+        <TargetEndpoint>GKE</TargetEndpoint>
+    </RouteRule>
     <RouteRule name="default">
         <TargetEndpoint>default</TargetEndpoint>
     </RouteRule>
