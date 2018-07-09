@@ -66,7 +66,13 @@
     </DefaultFaultRule>
     <HTTPTargetConnection>
         <LoadBalancer>
-            <Server name="onprem"></Server>
+            <Algorithm>Weighted</Algorithm>
+            <Server name="k8s">
+                <Weight>2</Weight>
+            </Server>
+            <Server name="onprem">
+                <Weight>1</Weight>
+            </Server>
         </LoadBalancer>
         <Path>/jaxws-endpoint/EBookStoreImplService</Path>
     </HTTPTargetConnection>
