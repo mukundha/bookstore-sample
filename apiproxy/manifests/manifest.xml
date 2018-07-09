@@ -1,39 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest name="manifest">
     <Policies>
-        <VersionInfo resourceName="JavaScript-FormatResponse" version="SHA-512:742ebee21153e5f21fa8357bcdf2fa575f93987e615eb470f4d72f24d700f80b6b8764eebb4b7565225992afce4ae05d0a575c941badbf53288eb8fd956d6f27"/>
-        <VersionInfo resourceName="SetBackendHeader" version="SHA-512:b223353d868f0ff90601b716ad18dbb566e63ad85e8a8b1101ab645ddff4bb9782047085d1c4e00e26bcfe01d83e9e16b6b6e598dabc81edce0ffe64c3ae13c8"/>
-        <VersionInfo resourceName="Verify-API-Key" version="SHA-512:dfa8537d52c4e65b9dc2d8d824950df931ba6f77a4b44d82909852db3ec24aacbf93887914b74669fac57de88029a2e890daf149178d1edad2e51eef4e20a240"/>
-        <VersionInfo resourceName="addAppendix-add-namespace" version="SHA-512:a2f8e4febaea67ebcf41ff216fdae1a7740e076acad9ab18820def3fafbab499144321eb973b9f33a7e1fb77bc6ddfbffc78d53f4d116216d955a1de8cf9a234"/>
-        <VersionInfo resourceName="addAppendix-add-soapaction" version="SHA-512:9bde4dbe81b9b3ef881863159cf3569950dfb560669a4ed7918e80b248705e6511a2674878d062b86b1480d32d8e6c0f5b47fc43e4bd6a9b0421d375e7d45ad6"/>
-        <VersionInfo resourceName="addAppendix-json-to-xml" version="SHA-512:38ab08bb11746eaf0b8eb579d2bcac51162c647187c5fe8f7b74b45fedecc1eeb950d716fb495bbf72af9f77d24848e49b3bb31a7187a07e302d5f7c91ef5dba"/>
-        <VersionInfo resourceName="extract-format" version="SHA-512:9347814b949c7950ccf70eb923e47559a86e7175ea2309a3f510fda1162df766cd1d8fe4967b01e433e72cf004f5c565f696006b5f9c09ac913b46d791577768"/>
-        <VersionInfo resourceName="findEBooks-build-soap" version="SHA-512:fba5b14569f949862b601dc18dc8fe7268139bd6f87299bc11da8ae219ebeee2495136881bdcfb010214c72a6f5261b7be22779007e1c35020aa11bbdfc9640f"/>
-        <VersionInfo resourceName="findEBooks-extract-query-param" version="SHA-512:0dc869dcf95cabe0ee022ec5a91c780be4ffcfd96c43d27c5c686751315fcb261ec28c937a7df5f26c0c3cab143104b79fd0003b6ee058db0281a641a6f7be63"/>
-        <VersionInfo resourceName="get-response-soap-body" version="SHA-512:25c4c1f0d1e62c8ad8dfa33d78cbcba979927c7b457e75135733bf6dfe6b0e8310810afea101a07436151b28ac12646e361cc431311b1fe3bbbac6424464b4ae"/>
-        <VersionInfo resourceName="get-response-soap-body-xml" version="SHA-512:0fd4ed80472b227a87620d37cbb034565c6785cd7ca86f66c8348d1126a410860639beedb8a8ffd18c8b5fe7ef196cf6f91212b41305b4675687f5842762f50f"/>
-        <VersionInfo resourceName="remove-empty-nodes" version="SHA-512:68faef6da72a0040a7888aef5dd1c9ff8a6862801884fd8952e317402c63a5bc1ca08a606fc5eba1df073255d81b898d7177ba5fadeab5c2f753c74c583447c4"/>
-        <VersionInfo resourceName="remove-namespaces" version="SHA-512:64072c9121741a810e68f42eee931511ad5f74218d2e9db50683f1747b5f237b07a80f802127349b1ecca26155f620779c7bd0c3402c39fe4a4a1f4cfeaa86c5"/>
-        <VersionInfo resourceName="return-generic-error" version="SHA-512:6975290accc49fb8fd4065f13c61ca2064d5c19910b787a6e971a5892f999acd8bd6f5cf74d2fff0d39253a6d1790d474da4d4036f75aea6340620a6679fe3d2"/>
-        <VersionInfo resourceName="return-generic-error-accept" version="SHA-512:17bade991b995d4bc014b94dec6d76c5448f98fa0349ae9a7ea116e56d2e3edeee78a103d4cd33e7c064584093e0135a4440ce1e7b30c4aba268e445cfd694a5"/>
-        <VersionInfo resourceName="return-open-api" version="SHA-512:6d28abf770cf899e88f0e0fdef150aea8e558cd0402f9a57888220025564c81c597d020303c53efe124f1ab61af5ae7e94c911eae338df64766ab6817592ff1c"/>
-        <VersionInfo resourceName="saveBook-add-namespace" version="SHA-512:4f5d3791821c494731d4fc808445ce95cd461caa92276b2d3ffb31d92ff650996b478a93ebcdb1df5d3921ab90553d1a0ea97ed6d4480bc950e7a1164e5ee131"/>
-        <VersionInfo resourceName="saveBook-add-soapaction" version="SHA-512:7bf59d7dd8049b568876a671bd30c5e4235505bc5837a52585d5f95b62733100bceff0b9f282817e9bd934579186d7746cf6395b519b909176e16b38ae4a0ef1"/>
-        <VersionInfo resourceName="saveBook-json-to-xml" version="SHA-512:207a45bab67ae0ceb2a7d77372445f384a5d888fbc7dcb15b0c00a32ab67c7deb3e55311c8bfc1663929e815987d0288724ac408d7e84132a3151435d8fbfc91"/>
-        <VersionInfo resourceName="set-response-soap-body" version="SHA-512:eae8ea54947d58ee477e02b939aaedcc47a32de7d077a34ae59a895c4aa032f7518fe564d7072ee1db7acbb82d9b9c78f358948e2c73e69d0860c517622efae7"/>
-        <VersionInfo resourceName="set-response-soap-body-accept" version="SHA-512:9188302f86726023cd7d739f8d4fb77a8cf033a82e46da8dfcaaec1699d33b88445d87f0e08eacffd4d93feea1f3d99e53a0b8a2c46ee592dc1f1ed57c069366"/>
-        <VersionInfo resourceName="set-target-url" version="SHA-512:4dc290d948a305e1aa7bbfb29d8bf8714848f32c9517cf8fb4e84a3c2073767fe74279c6b9963b7d776292e566e94f3a8b57d6f2d39716b9850d71f697298c1a"/>
-        <VersionInfo resourceName="takeBook-build-soap" version="SHA-512:a6856344569843cd247d2482a8ae3db841b8c75d41f05661a2cd1f03d672618824f2e03b8dbc06738431f6c22908b7b880683c30e1e08583631c5aa80d447f06"/>
-        <VersionInfo resourceName="takeBook-extract-query-param" version="SHA-512:af6aecd8fd61b837e7ed1c34ac47e0b378efefec9532413a920825648f903e4df0c7d4e3b073569b52b6ed155f267cbccf7bbc4364dafcaed835174eb8edf9d5"/>
-        <VersionInfo resourceName="unknown-resource" version="SHA-512:57070e75508dca5be8a340d0257de30efafc0e2d32c6d52de140bd23516933dbba6fe59bcaf9f774ce343b171c525bca210f045622307ab6f58db9b1e0f4bb42"/>
-        <VersionInfo resourceName="unknown-resource-xml" version="SHA-512:227ac7b003fb1486811a81a80dd08fbec31d9d85421608679ca99a76e5e7aaa53d076e4de5684def338fda159688fde37e4f86f602eb6679d870bb36987d768f"/>
-        <VersionInfo resourceName="welcomeMessage-add-namespace" version="SHA-512:d0b2fdaf3aa2dafbbfca853a11ee6037a2dae5df9b983f134209b8c7e7f416d87255a3f2185560a449cbc9566583813430c2ea532f30bd94e780d82e19860972"/>
-        <VersionInfo resourceName="welcomeMessage-add-soapaction" version="SHA-512:bd8132d6aa845fe6fb6fadfc11ba7997718cf11f1a6a3d348e51688c9d1cdaa6489ac23dcef3455129922e1b99be2155a841d4bbc20ee6630c39414144a63d94"/>
-        <VersionInfo resourceName="welcomeMessage-json-to-xml" version="SHA-512:dba70028798b2edad131d85cb7c2c51fb27575eab918af9c8909be6aec53684017ec19e51e7604c21a87a62bafabe22aff85eba61ce47b2cd7d4824cf37f75b3"/>
-        <VersionInfo resourceName="xml-to-json" version="SHA-512:e598ebce23e00c8f38c742c329541e3f97f42cd4ef3bd4ebad0ee37f30ca34b2d9e58eb0112b184e6873b20a564f7d89522eb93f5dfe45793f51a677b73f593b"/>
+        <VersionInfo resourceName="JavaScript-FormatResponse" version="SHA-512:296565bbb256a989a31570788712caab1215876b4882dd196f74876c0d4ca2d7b5637478041bd633599b8c44fccd39082bb65c6c10b7cd9588aa298971b056fe"/>
+        <VersionInfo resourceName="Verify-API-Key" version="SHA-512:0dbe1977cc64cad81fd832b102aa38a1b580baece40e7a1bc227ede85ec064f9f7fec60db355da5729c328bd991cb0519a20061304e1322ca945abce65dfcf42"/>
+        <VersionInfo resourceName="addAppendix-add-namespace" version="SHA-512:1c2aa6aaa22c6536e3fd84f7c0d284e309411c865851e8931b338ef6c80bbad053615650468619fc5aa44f9fafbd8a2bdb03626298f464f46ba822b14c5a70e6"/>
+        <VersionInfo resourceName="addAppendix-add-soapaction" version="SHA-512:c43e74b282d8b620f62629b47e0e3e6543d679c8687e59e56093b2bd577d30235c61455e6945830f3c218f3673f1ea7d987f2e90c22a258cf8bf63d73879f806"/>
+        <VersionInfo resourceName="addAppendix-json-to-xml" version="SHA-512:0ccf3c420e5e0dc9de5ff1da3a127f23825c159fe1c43a220f3fc1971fb4ee545f2602671ad46d08f5628ec3adf29ef405aeff2c6870564dac9d32891c177e59"/>
+        <VersionInfo resourceName="extract-format" version="SHA-512:d4fa1639b4c5c3bdd5cff9ce3da1f2c6781d7e57b6c5274083775d16288b21a3bd5adc80175bd6395a7ee5efb9791b7dabed1018727f7f28410bcccf0e34147d"/>
+        <VersionInfo resourceName="findEBooks-build-soap" version="SHA-512:d9a11a04206297b2ab571d7e40bb7bdf05ad4e52ca5d9e69633dfde4230317b22af6deec00a2fbbe8fbeba24b9c3b655c58166b0642949f31b73473044938f27"/>
+        <VersionInfo resourceName="findEBooks-extract-query-param" version="SHA-512:9cf74c811a320223730477fdc3ecac69f7e22717441ae4a788538e6e3359cae9d791ba98a97dfc87d23da9d1da1c0cbf083d3e8393cbeb7407783ecdadff3280"/>
+        <VersionInfo resourceName="get-response-soap-body" version="SHA-512:12bf09006386286f7f258a3333aa8c7d663a3020f0240f75d1fee385b1ae4163a92f1c9d60b10950ac5108c94661b015ce7021e4d97c160e9676426f7b5aff23"/>
+        <VersionInfo resourceName="get-response-soap-body-xml" version="SHA-512:7541e5ebf3ef6fc3cce4f30039f0be1db603a69e80aaac5e8296287a5f444f49d2ce42d5aedb5c8955a2da1bad5af688187066d6cba24e4896d75cae4b1142e3"/>
+        <VersionInfo resourceName="remove-empty-nodes" version="SHA-512:62dab4905ae831bdedd09e4bc05c78ab9a9bfbcb064dcbc3bce9ec268863b344be9fa12db0a860d8be91743bd667779a79d5de8fea79617de3de74e89e75d567"/>
+        <VersionInfo resourceName="remove-namespaces" version="SHA-512:8247defbc26497c737439e3ad193351ae91db1291232c529a7028c3f4d784167e193d1bcb73c7b6a88ad03d2111cfb67f6cacaa5b3ee41a5d395112619afd038"/>
+        <VersionInfo resourceName="return-generic-error" version="SHA-512:5b6396e6398e23053298f9ce4f748379842b927e6424f9ef9632d04234e2e86bd29f0ff606e6cafaa5eeaed204b4eaacbdca397b06297f4e63299dabb9afe087"/>
+        <VersionInfo resourceName="return-generic-error-accept" version="SHA-512:5bf7564d069779e518f04948b0d0b7db3b8136659c7249e5fcb006498ffb8080c010bde02acc3581b807529982c65f1af491c14a9364906c681f8ca8f6fccf1b"/>
+        <VersionInfo resourceName="return-open-api" version="SHA-512:02678f889bab4a3e608d0cba8e55251abf11af27d934c3758bf6f203865ec87b82c89a0c7f29cea4679da31965948d28e03ec7ca6010f99cd3bd2fb80ec9c161"/>
+        <VersionInfo resourceName="saveBook-add-namespace" version="SHA-512:02813375f33252188bc40f361dafc431133e05960f298b6a3f4539c1429339868c75c87a390c6b812261c4dec366605e39d54b693b89f39e0ecd72a0c5490e1f"/>
+        <VersionInfo resourceName="saveBook-add-soapaction" version="SHA-512:df184b0e836f4c43693f995a9740b22bf5598d31b01a56327723ff3110758603d252b8f8f2e8c66f283ec810b6d7b6348f3355dc2ff57414a92131bccc1a8698"/>
+        <VersionInfo resourceName="saveBook-json-to-xml" version="SHA-512:f01d7110e66292d3779a5b0eb882081fae3ec140d0c1894694f5f2d7970e0b29971980ec802dadd5319031f4f07f8166d705677b5cf21611bf797a7947bf5d6c"/>
+        <VersionInfo resourceName="set-response-soap-body" version="SHA-512:aa8cd85f80fa48a4a6d214f682630bf2dfb71beac3dd1c767cac9181bf1426d91197c71ba4294590640ff79f6128d73502b53c0e3e2c06853afe4367bdfad4f1"/>
+        <VersionInfo resourceName="set-response-soap-body-accept" version="SHA-512:b944bc0683de15f5e537b1d8207160f3632f817671a82e51f314370ccd2fc2d0cf8c06f073d3d617b5ffb11ecf51c092f6068470e550504f5ad76bf154c2f665"/>
+        <VersionInfo resourceName="set-target-url" version="SHA-512:1cc07dbeb891214f44c4c6405cad1fb73f19d8b90c8b8cb8a391a02fb2b089dc4754c46837bce9ecbf00daf522e1449f065963a2284a1658066fb4de52240046"/>
+        <VersionInfo resourceName="takeBook-build-soap" version="SHA-512:bf06504b2511e8441fbd5d35c5d3c826f6c61cb7280152094717614f6585b3ea84ea5179c450bffc3198cfc559fa302c224f4174da4e87f8f6bc09f3cc2c8343"/>
+        <VersionInfo resourceName="takeBook-extract-query-param" version="SHA-512:70a0b16eb6d5947e2b5a7efce1edfef03dee9efb1fbb8b694a0d0e2dc72242834d5312d02a629faa647c4024fcc5684c6a847ac4c73ddbadbec1a40271b27a18"/>
+        <VersionInfo resourceName="unknown-resource" version="SHA-512:82c12f15557e2e180cb988b90d308a303d102fc55cf8b479080bfb3ccaf63962d77054e8147052e3fc9d279db987dc022b9f36f2437b702d128a66b59406ded0"/>
+        <VersionInfo resourceName="unknown-resource-xml" version="SHA-512:52a669fccdee573b1ac9a012ea36a1562536425ac439e1460b80950bee8e6f201f1840901c059a6c8026daef5be6cd6b6d5fdf271eee579622b3b9861418fba7"/>
+        <VersionInfo resourceName="welcomeMessage-add-namespace" version="SHA-512:9b76080c8b55ee9e16068a8115a26b8bc50e6553ea88558d304f477f54e721ec18cd06c9236084b471a7857c9f127c31618ef3175d23e440d1bd7b6d99cc7808"/>
+        <VersionInfo resourceName="welcomeMessage-add-soapaction" version="SHA-512:88989ceb24410dbd192f99e01c17541e3a938992e4d5801cdb0e4022753ea7194f5f248fb2bb0390beb2ce118d418d3076bc8b3144fb547a80d2a0752f794f24"/>
+        <VersionInfo resourceName="welcomeMessage-json-to-xml" version="SHA-512:c240e33175a9471f8c1e21fad7241c3385311fa003e100e5ea26bdc0cad4a36dd4d4c59cbf3542b9f7809e0b02d59fccd74ec48f4b2cccfa976ab511e743c611"/>
+        <VersionInfo resourceName="xml-to-json" version="SHA-512:1150b9d8c30023008308c40a142a85986159ecaa46bd599412d60f6c7e6cbd2ddb78ebd62b025965ece4e65e287da3774e4a90f37078e9f3e0fcf51edd896c3d"/>
     </Policies>
     <ProxyEndpoints>
-        <VersionInfo resourceName="default" version="SHA-512:359975185dfede683e7c4c38dd97fce142f1e48e2850b60f5384ab914c358c56b4101df2d0f85ad31fda54343450a36f62cda0764f41dcffb2a813c2e05a0c65"/>
+        <VersionInfo resourceName="default" version="SHA-512:da442edc7440b5751f373b65a1db0c7ee6378576b817fa6b28ca83dbce8d583a0e2f45db1c0c7a3c9973172626decfa30aa7eceaeb1525b7460bb51b9e7a9bfb"/>
     </ProxyEndpoints>
     <Resources>
         <VersionInfo resourceName="jsc://FormatResponse.js" version="SHA-512:4d064f58c9bf2b1f277851cf0648bc485dc29218f13f10a01ed6c13fec5b355f99f7b1d440d2eaba127e12352654935a64d2ad7e97ddcaf3497e194cd765fab8"/>
@@ -45,7 +44,6 @@
     </Resources>
     <SharedFlows/>
     <TargetEndpoints>
-        <VersionInfo resourceName="GKE" version="SHA-512:40c9c5bb512909f3d02bf662207c49ea7dd328f7cbe5f9f1f36c7fefa66d4b9f84061d046315276e01d2365387c516eac2dbc2811561c0e8e29a46bc53db21ac"/>
-        <VersionInfo resourceName="default" version="SHA-512:925a1b38af7b47457a9327082bd56270476ad92c0b648e58ea131c9eb875d9dba1bcd8024b88693c17bd3fe8957144b10555beec794a9ba323831afd33706c98"/>
+        <VersionInfo resourceName="default" version="SHA-512:4fc30af9f1858dffc1bc4e298f67440337d6c1b7c5859b394d14cbca0069716e1200d4c8854d99501658fdf76acc4378d5368c755783e233ef8f0eeafa5641d0"/>
     </TargetEndpoints>
 </Manifest>

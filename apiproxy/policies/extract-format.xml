@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <ExtractVariables async="false" continueOnError="false" enabled="true" name="extract-format">
     <DisplayName>Extract Format</DisplayName>
-    <FaultRules/>
     <Properties/>
     <Header name="Content-Type">
         <Pattern ignoreCase="true">{contentformat}</Pattern>
@@ -10,7 +9,6 @@
         <Pattern ignoreCase="true">{acceptformat}</Pattern>
     </Header>
     <Variable name="request.verb">
-        <Pattern ignoreCase="false">{verb}</Pattern>
+        <Pattern>{verb}</Pattern>
     </Variable>
-    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
 </ExtractVariables>

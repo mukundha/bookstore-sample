@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <AssignMessage async="false" continueOnError="true" enabled="true" name="addAppendix-add-soapaction">
     <DisplayName>addAppendix Add SOAPAction</DisplayName>
-    <FaultRules/>
-    <Properties/>
     <Add>
         <Headers>
-            <Header name="SOAPAction"></Header>
+            <Header name="SOAPAction"/>
         </Headers>
     </Add>
     <Set>
         <Headers>
             <Header name="Content-Type">text/xml;charset=UTF-8</Header>
         </Headers>
-    </Set>
+    </Set>    
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
-    <AssignTo type="request" transport="http" createNew="false"></AssignTo>
+    <AssignTo createNew="false" transport="http" type="request"/>
 </AssignMessage>

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <AssignMessage async="false" continueOnError="true" enabled="true" name="findEBooks-build-soap">
     <DisplayName>findEBooks Build SOAP</DisplayName>
-    <FaultRules/>
-    <Properties/>
     <Add>
         <Headers>
-            <Header name="SOAPAction"></Header>
+            <Header name="SOAPAction"/>
         </Headers>
     </Add>
     <Set>
@@ -16,6 +14,7 @@
             <s11:Envelope xmlns:s11="http://schemas.xmlsoap.org/soap/envelope/">
                 <s11:Body>
                     <ns1:findEBooks xmlns:ns1="http://endpoint.jaxws.javaee7.org/">
+                        <!-- optional -->
                         <arg0>{arg0}</arg0>
                     </ns1:findEBooks>
                 </s11:Body>
@@ -24,5 +23,5 @@
         <Verb>POST</Verb>
     </Set>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
-    <AssignTo type="request" transport="http" createNew="false"></AssignTo>
+    <AssignTo createNew="false" transport="http" type="request"/>
 </AssignMessage>

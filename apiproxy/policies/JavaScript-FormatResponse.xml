@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Javascript timeLimit="200" async="false" continueOnError="false" enabled="true" name="JavaScript-FormatResponse">
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="JavaScript-FormatResponse">
     <DisplayName>JavaScript-FormatResponse</DisplayName>
-    <FaultRules/>
     <Properties/>
     <ResourceURL>jsc://FormatResponse.js</ResourceURL>
 </Javascript>

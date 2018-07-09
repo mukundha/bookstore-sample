@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="2" name="Ebookstore">
-    <Basepaths>/ebookstore/v1</Basepaths>
+<APIProxy revision="3" name="Ebookstore">
     <Basepaths>/ebookstore/v1</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
     <CreatedAt>1531138614921</CreatedAt>
     <CreatedBy>gnanasekaran@google.com</CreatedBy>
     <Description>EBookStoreImplService</Description>
     <DisplayName>EBookStoreImplService</DisplayName>
-    <LastModifiedAt>1531143611719</LastModifiedAt>
+    <LastModifiedAt>1531143976991</LastModifiedAt>
     <LastModifiedBy>defaultUser</LastModifiedBy>
-    <ManifestVersion>SHA-512:f1e85c1bf22315afcc0312332158eea36b9927bfaee15c9459dd68767223940ef124dff3a9daacc277c2a53a1a893315c43f36fc083ade81a3f4c6c84d2e22bd</ManifestVersion>
+    <ManifestVersion>SHA-512:463ae95a1307c91800349e98446b1ee23c28ca5bfc5b293e15da4056019b98c0af90cdf87ba88845d975b62fd7ba892304b31793485fbd975e8cb6c2ca89aa71</ManifestVersion>
     <Policies>
         <Policy>JavaScript-FormatResponse</Policy>
-        <Policy>SetBackendHeader</Policy>
         <Policy>Verify-API-Key</Policy>
         <Policy>addAppendix-add-namespace</Policy>
         <Policy>addAppendix-add-soapaction</Policy>
@@ -56,7 +54,6 @@
     <Spec></Spec>
     <TargetServers/>
     <TargetEndpoints>
-        <TargetEndpoint>GKE</TargetEndpoint>
         <TargetEndpoint>default</TargetEndpoint>
     </TargetEndpoints>
 </APIProxy>
